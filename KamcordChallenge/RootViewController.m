@@ -47,11 +47,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"videoCell" forIndexPath:indexPath];
-
     Video *video = self.videosArray[indexPath.row];
 
     UIImage *thumbnailImage = [UIImage imageWithData:video.thumbnailImageData];
     cell.thumbnailImageView.image = thumbnailImage;
+    
     cell.titleLabel.text = video.title;
     cell.usernameLabel.text = [NSString stringWithFormat:@"By: %@", video.username];
 
